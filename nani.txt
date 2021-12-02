@@ -1,0 +1,451 @@
+3:56 PM 10/6/2021 
+Introduction:
+
+     Hello. I'm Nitheesh kumar. I have completed my graduation in malla reddy college of engineering in the year 2019.
+I have completed my intermediate in 2015 and ssc in 2013. After my gradutaion, I got interst in testing and I have done training in manual 
+testing and SQL.
+
+why testing:
+
+    i choose this field because for every s/w dev testing is mandatory. without testing the s/w, it can't be sent into the live for production as we get
+lot of errors and it is waste of time, money and client business operations. So there is a big scope for testing in the future and im also interstd in 
+this field so i chose to be here.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Testing:
+        It is the process of verification of app/software whether it is working perfectly fine or not as per the client req.
+As a tester we have to identify the bugs/defects in the app/software and inform/report them to the devvelopment team, projct team and test
+ lead so that they will resolve the issue on time.
+
+
+
+
+
+Smoke testing:
+       It is a build verification test. When a build is prepared, it will be sent to smoke testing first. Here we will test the High priority slot checks 
+and critical functional flows.we dont have any planned cases here. We will check the stability of the build, if it is stable we can go for further testing. If it is not stable 
+we have to inform to the dev team.
+
+
+
+Sanity testing:
+      It is also a build verification test. Here we will check 1 or 2 priority cases from each module. If the build is stable we can go to further testing,
+if not we will inform to the dev. team that the build is not stable. Here we have planned test cases. Once completed we will share the summary to the dev. team.
+
+
+
+Regression testing:
+       It is the process of reexecution of the existing functional flows. Because when new features or funtional flows are added to the app, it
+should not effect the existing functional flows.
+
+
+
+
+Progression testing:
+       It is the process of testing the new functinal flows or cases rather than the existing features added to the app.It is opp. to the regression testing.
+
+
+
+
+compatibilty testing:
+       It is the testing of an app/ software whether it is working fine or not on client expected platforms such as the browsers and OS.
+Here we have to check whether it is working fine on expected browsers on specified OS by client.
+
+
+
+
+Retesting:
+      It is nothing but the re-execution of the specific functional flow after we get it from the developer team
+ after fixing the issue.
+
+
+
+
+PERFORMANCE TESTING:
+     It is the testing of the performance of the system w.r.t parameters like load, stress, security and volume. we will check the response time and
+throughput. It is a non-functional testing process.
+
+Load testing:
+     It is the process of verification of performance of the system with client expeccted load. We have to test the system with client expected users.
+
+Stress testing:
+     It is the process of verification of performance of the system beyond the client expected load. Here we have to increase the users and check the
+performance of the system how it is responding.
+
+Security testing:
+     It is the testing of the systems whether the data is encrypted and decrypted, debit/credit cards are protected, passwords are encrypted, and otps for
+login etc.
+
+Volume testing:
+     It is the process of verification of systems performance by increasing the volume of data in the database. When we increase the volume of data we have
+to check how the systems performance.
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+Test scenario template:
+It is identifying high level functioinal flow for every given req.(brd,frd) 
+A test scenario template generally consists of a wide range of possibilities.
+the parameters of test scenario template are:
+
+--TEST SCENARIO ID
+--TEST SCENARIO OBJECTIVE
+--TEST CASE ID
+--TEST CASE OBJECTIVE
+
+
+-------------------------------------------------------------------------------------------------
+
+
+Test case template:
+
+A test case template is well designed doc for req. and better understanding 
+of the test cases.
+
+the parameters are:
+
+--TEST CASE ID
+--TEST CASE OBJ
+--STEPS
+--DESC
+--EXPCTD RESULT
+--DESIGNER
+--TYPE
+--SUB
+--ACTUAL RESULT
+--STATUS
+
+
+--------------------------------------------------------------------------------------------
+
+
+RTM:
+
+RTM stands for req traceability matrix. it is the mapping b/w the test cases and the req.
+By this we will understand whether all the req. are checked so that we can find any unchecked test cases.
+
+The attributes of RTM are;
+
+--REQ ID
+--REQ DESC
+--REQ COVERAGE
+--CASE ID 
+--CASE EXE STATUS
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+Defect parameters:
+
+After testing if we find any defects/issues we will log them in the QC. The parameters of defect log summary are:
+
+--ISSUE DESC
+--STEPS TO REPRODUCE
+--ACTUAL RESULT
+--EXPECTED RESULT
+--TEST ENV
+--TEST DATA
+--PRIORITIES
+--SEVERITIES
+--PROJECT
+--ASSIGNED
+--STATUS
+--TEST PHASE
+
+
+PRIORITIES;
+
+It is based on how fast the issues should be resolved or simply the urgency.
+
+P1- critical -------1 day
+p2- High------------2 days
+p3- Medium----------3 or 4 days
+p4- Low------------ 5-6 days
+
+
+SEVERITIES;
+
+It tells the impact of the issue/defect on the app or product funtionality.
+
+S1- critical
+s2- High
+s3- Medium
+s4- Low
+
+------------------------------------------------------------------------------------
+
+Defect Life cycle:
+
+--> Initially when a defect is logged it is in the NEW status.
+--> the defect with new status will be sent to dev. and the status changes from new to ASSIGNED/OPEN.
+-->After the defect is fixed by dev. its status will be changed to FIXED. Dev has to attach the unit test and
+test evidences along with the defect and migrated to testing team.
+--> After that the status will be changed from fixed to PENDING RETEST.
+-->The defect with pending retest status will be retested by the tester and if it is fine status will be closed
+or else it is sent back to dev team with status FAILED RETEST.
+--> If the test is invalid and not replicated beacause of test data, then the status changes to REJECTED.
+--> If the test is valid and cant be fixed for this release and targetted for next release the status changes 
+to DIFFERED.
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Testing techniques:
+
+-->   BVA-boundary value analysis. Generally dev do errors in boundary conditions, so we check this technique.
+  Here we generally test 6 combinations
+
+--MAX
+--MIN
+--MAX+1
+--MAX-1
+--MIN+1
+--MIN-1
+
+
+
+
+-->  EQUIVALENCE CLASS PARTIONING:
+    
+               Here in this technique, we will check the valid and invalid combinations so that we get all the happy paths and 
+negative scenarios.
+
+     Consider an ex of Login passwrd--only 8 char allowed-valid
+                                           <8 and >8 - invalid
+
+
+-->  DECISION TABLE BASED TESTING:
+     
+              Here we have some set of rules, if it satisfies all the combinations or only specific cases the submit button 
+will be enabled--this is the example. this is a systematic approach where diff. input combinations and their 
+corresponding sys behavior will be captured in a table form
+
+
+
+-->  STATE BLOCK DIAGRAM:
+
+             Here we can identify and write functional paths using state diagram.
+
+     ex- Login passwrd incorrect 1,2,3-blocked
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+TEST MODELS:
+
+--> AGILE SCRUM METHODOLOGY
+
+--> WATERFALL MODEL
+
+--> V-MODEL
+
+
+
+
+
+
+
+---> AGILE SCRUM:
+  
+      It is a continuous iteration of dev and testing the s/w in incremental approach.We are getting all 
+the req. in the form of user stories from BA's and designers. Generally this model is done now a days in all companies.
+Here we have a release for evry 1 or 2 months. for every release we have 1 or 2 sprints.
+As there is freq. change in the req. we have to prep test scenarios 
+and cases freq and give walkthoroughs to BA's and designers. All test cases will be uploaded.
+
+Agile scrum has 3 pillars:
+
+1) ROLES
+--> PRODUCT OWNER
+--> SCRUM MASTER
+-->  TEAM
+
+2) ARTIFACTS
+--> PRODUCT BACKLOG : It is a list of prioritized delivarables such as new features that should be implemented in the s/w.
+ It is handled by product owner. Scrum master selects some stories and add up to sprint backlog for the release.
+ Anyone can add into it by getting approval from the product owner.
+
+--> SPRINT BACKLOG:  These are the user stories which should be done for a sprint release. During sprint release, team selects some 
+userstories from the product backlog and identifies the tasks that should be done to complete each user story.
+
+--> BURN DOWN CHART : It rep. the overall progess of work completed and work in progress. From this graph we can know the work which
+is not completed.
+
+3) CEREMONIES:
+
+--> SPRINT PLANNING : Sprint planning starts with importing userstories from release backlog to sprint backlog. it is hosted by scrum master.
+The testers estimate effort is to test all the stoeries in the sprint backlog.
+
+--> SPRINT REVIEW : It is also hosted by scrum master. It is a discussion which lasts for 2-4 hours, in which we discuss about the previous 
+sprint accomplishments and what to be learnt.
+
+--> SPRINT RETROSPECTIVE : After completion of every sprint release, scrum master will conduct a retrospective meeting. Here we will discuss
+about the challenges faced, lessons learnt, what can be done better in the next release. All the discussion will be documented and shared to 
+evryone.
+
+--> DAILY SCRUM MEETING: This is a daily stand up call conducted by the scrum master. here day to day activities and all the doubts will be 
+discussed and informed to scrum master by evryone.
+
+
+GROOMING: here present product backlog stories are discussed and next sprint planning will be done.
+
+
+
+
+WATERFALL MODEL:
+
+Unlike Agile scrum model, this is a step by step process. Here one step cannot be done without the completion of previous step. Simply we can say 
+the previous o/p is i/p for present step. This model is generally used in small scale as it takes lot of time. 
+
+--> REQ. - brd, frd doc are seen for req.
+--> DESIGN - here all the tools req. for s/w designing are checked and urls with login credentials
+--> IMPLEMENTATION - here the code is designed and unit test is done and sent for testing along with test evidences
+--> TESTING or VERIFICATION - testing is done in this phase all types(smoke, sanity regeression etc) and issues are reported to the dev team.
+--> DEPLOYMENT - after completion of testing releasing the product into live
+--> MAINTAINANCE- resolving the errors and making report. it is done in client env
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+V-MODEL:
+
+req analysis- brd frd doc, knowing the req.
+system design- what techniques are used after seeing req.
+archtecture design-HLD's preparation, here the module are designed based on HLD
+module design- LLD's prep and each module is broken into smaller units in order to clear understanding for programmer for coding
+coding - dev team will design a code based on the req.
+unit testing- testing each individual unit of a module
+integration testing- testing a group of individual units whether they can comm. with each other
+system testing- testing the s/w whether they are meeting the req both functional and non functional testing.
+acceptance testing - testing the s/w whether it is meeting user req or not and whether it is ready for real time use.
+
+disadv- poor model for long and ongoing project
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+LIFE CYCLES:
+
+1) SDLC- S/W DEV LIFE CYCLE
+2) STLC- S/W TETSING LIFE CYCLE
+
+
+
+
+SDLC
+
+--> REQ-going through FRD and BRD doc and undrstndng req, will be involved in walkthroughs, testing phase starts from req phase itself
+--> DESIGN AND PLANNING- undrstndng HLD and LLD docs, dev team pseudo code and testers in test case and scenario prep and walkthroughs
+--> CODING-dev team involved in coding, unit test and results sent to req teams, test team focus on test env access and checks test data prep
+    and responsibilty matrix before getting build. 
+--> TESTING- once build came--smoke, sanity ,progression, regression activities are done. after completion gives test exe summary to projct team and stakeholders 
+    will decide whether it is go/ no go and further release action plans are taken care and new features added.
+
+
+
+
+
+STLC
+
+
+--> REQ ANALYSIS-UNDRSTNG REQ and going through brd, frd docs
+--> TEST PLANNING-INSCOPE, OUTSCOPE items for current release, TEST PLAN, STRATEGY, TEST ESTimation SIZE AND EFFORT IN PERSON HRS, TEST SCHEDULES & DELIVERABLES
+--> TEST CASE PREP-TEST SCENARIO PREP, APPROVAL FROM SCRUM MAS, TEST CASES DEV, QUERY RESOL, PEER ND EXT REVIEWS, UPLOAD TEST CASES
+--> TEST ENV SETUP-CHECKING THE URL, LOGINS AND CREDENTIALS, CHECKING INTERFACE CONECTIVITIES.
+--> TEST EXECUTION-EXECUTING TEST CASE ND SHARING DAILY DASHBOARD, LOGGING DEFECTS
+--> TEST CYCLE CLOSURE-completing exe, publishng outstanding defects, getting confirmation go/no go, taking signoff from client nd team.
+
+
+
+
+test plan:
+
+brd frd approvals
+types of testing - smoke, sanity, regression
+cycles of testing
+test data
+responsibility matrix- assigning responsibilities to team
+testing tools
+test envi
+defect management-severity, priority
+test criteria (entry, exit)
+communication plan
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+test strategy:
+
+test prep nd planning
+test devlopment
+test env setup
+test exe
+test status tracking and reporting
+9740040099
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what will we say if the developer is not accepting the issue??
+--> rechecking brd frd, quickly conducting meeting with BA, dev. team and whoever is req. and get a conclusion and send the conclusion to everyone.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+usability- user friendly
+reliabilty- stability in the test scores
+portability- easily transfered from one env to another
+availability - whether to be available for everyone.
+testability - whether the app should be allowed for test
+scalability- testing the user load by increasing and dec.
+flexibility- checking how flexible it is
+reusability- whteher it can be reused
+maintainability- whether it can be updated or modified
+supportability- whether it can support 
+interoperability- the interaction b/w one s/w and the other.
+performance - non functional and includes load, stress, volume and security
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+about IVY??
+
+IVY is est in 2001. CEO is ANIL VEERAMANI. it is a leading gaming company in INDIA. FOUNDER is SUDHAKAR PRASAD. It is involved in s/w publishing, consultancy
+and supply. it provides cutting edge s/w and support services to leading gaming companies in the world.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SQL
+
+DDL-data definition lang.
+-->create 
+-->drop
+-->alter
+-->truncate
+-->rename
+
+DML-data manipulation lang.
+--> insert
+--> update
+--> delete
+
+DCL-data control lang.
+--> commit
+--> rollback.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
